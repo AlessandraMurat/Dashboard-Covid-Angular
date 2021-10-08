@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col" style="display: flex; justify-content: center; align-items: center;">
+            <form #dadosForm="ngForm">
+                <h5 class="text-center py-2">Atualização de casos</h5>
+                <div>
+                    <div class="col-md-12">
+                        <input class="form-control" type="number" id="numMortes" name="numCasos" [(ngModel)]="dado.numCasos">
+                    </div>
+                    <div class="col-md-12 mt-4 mb-4">
+                        <select class="form-control" name="mes" id="mes" [(ngModel)]="dado.mesArr[0]">
+                            <option value="0">Junho</option>
+                            <option value="1">Julho</option>
+                            <option value="2">Agosto</option>
+                            <option value="3">Setembro</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 form-group text-center" >
+                        <button class=" btn btn-success" (click)="atualizarDados()">Atualizar</button>
+                    </div>
+                    
+                    
+                   
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <div id="column_chart"></div>
+        </div>
+    </div>
+
+</div>
